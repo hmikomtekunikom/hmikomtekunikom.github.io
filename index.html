@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Game Strategi Kuis HMI</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+</head>
+<body>
+
+   <!-- LOADING SCREEN -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <!-- Pastikan nama file gambar logo Anda sesuai -->
+            <img src="komtek.PNG" alt="Logo HMI" class="loading-logo">
+            
+            <h2 class="loading-title">MEMUAT PERMAINAN...</h2>
+            <p class="loading-subtitle">MEMPERSIAPKAN PERTANYAAN KUIS...</p>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="progress-text" id="progress-text">0%</div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="quiz-panel">
+            <h2 id="level-title">Level 1</h2>
+            <p id="question-text">Pertanyaan akan muncul di sini...</p>
+            <div class="options" id="options-container">
+                </div>
+        </div>
+
+        <div class="gameplay-area">
+            <div class="road"></div>
+            
+            <div class="car-container" id="car">
+                <model-viewer 
+                    src="karakter.glb" 
+                    alt="Karakter 3D HMI" 
+                    auto-rotate 
+                    camera-controls 
+                    disable-zoom>
+                </model-viewer>
+            </div>
+            
+            <div class="level-markers" id="markers">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
